@@ -11,11 +11,11 @@
 
 # Variablen mit Dateinamen, Compileraufruf und Optionen fuer Compiler und Linker
 HDR     =											#header einfuegen -> hpp
-SRC		= 2.cpp							#code einfuegen   -> cpp
+SRC		= 3.cpp							#code einfuegen   -> cpp
 OBJ     = $(SRC:.cpp=.o)
 BIN     = main										#name der ausfuehrbaren datei
 CC      = g++
-CCFLAGS = -std=c++20
+CCFLAGS = -std=c++17
 LDFLAGS = -o $(BIN)
 
 # Defaulttarget

@@ -6,22 +6,25 @@
 */
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
 
 int main(){
     int OneOne(1);
 
-    std::cout << "Give number to show mutiplikation table!\n ";
+    cout << "Give number to show mutiplikation table!   ";
     do{
-        std::cin >> OneOne;
+        cin >> OneOne;
     }while(OneOne < 1 || OneOne > 10);
 
-    for (int y = 1; y = OneOne; y++)
+    for (int y = 1; y <= OneOne; y++)
     {
-        for(int x = 1; x = OneOne; x++){
+        for(int x = 1; x <= OneOne; x++){
             
-            std::cout << y*x << " ";
+            cout << setw(2) << y << "*" << setw(2) << x << " = " << setw(2) << y*x << "    ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
     
     
