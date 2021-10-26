@@ -1,5 +1,6 @@
 /*
-*Peter Weber  1936796
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
 *
 *Gruppe: Mo16
 *Uebungsblatt: 1 Aufgabe: 1_b_1

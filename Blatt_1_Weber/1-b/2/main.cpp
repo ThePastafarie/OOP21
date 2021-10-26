@@ -1,5 +1,6 @@
 /*
-*Peter Weber  1936796
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
 *
 *Gruppe: Mo16
 *Uebungsblatt: 1 Aufgabe: 1_b_2
@@ -10,7 +11,7 @@ using namespace std;
 
 // Funktion für kommazahlen von Dec nach Bin 
 // k-precision nach komma stellen
-string preK(string binary,int Integral){
+string preK(string& binary,int Integral){
     int rem = Integral % 2;
 
 	// Append 0 in binary
@@ -29,7 +30,7 @@ string decToBin(double num, int k_prec=0){
 	int Integral = num;
 	double fractional = num - Integral;
 
-	/*while (Integral)
+	while (Integral)
 	{
 		int rem = Integral % 2;
 
@@ -38,8 +39,8 @@ string decToBin(double num, int k_prec=0){
 
 		Integral /= 2;
 	}
-    */
-   binary = preK(binary,Integral);
+    
+    //preK(binary,Integral);
 
 	reverse(binary.begin(),binary.end());
 

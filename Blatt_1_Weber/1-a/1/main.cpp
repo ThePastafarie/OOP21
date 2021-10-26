@@ -1,9 +1,11 @@
 /*
-*Peter Weber  1936796
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
 *
 *Gruppe: Mo16
 *Uebungsblatt: 1 Aufgabe: 1_a_1
 */
+
 
 #include <iostream>
 
@@ -19,7 +21,7 @@ int main(){
 
         std::cin >> Num;
 
-        allNumSum = allNumSum + Num;
+        allNumSum += Num;
     }
 
     std::cout << "all together is: " << allNumSum << " divided by " << counter << " is: " << allNumSum/counter << std::endl;

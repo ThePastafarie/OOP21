@@ -1,5 +1,6 @@
 /*
-*Peter Weber  1936796
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
 *
 *Gruppe: Mo16
 *Uebungsblatt: 1 Aufgabe: 1_a_3
@@ -13,7 +14,6 @@ using namespace std;
 void reverseStr(string& str) 
 { 
     int n = str.length(); 
-  
     //chars werden vertascht
     for (int i = 0; i < n / 2; i++) 
         swap(str[i], str[n - i - 1]); 
