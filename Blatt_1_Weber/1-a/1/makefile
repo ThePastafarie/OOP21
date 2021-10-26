@@ -11,7 +11,7 @@
 
 # Variablen mit Dateinamen, Compileraufruf und Optionen fuer Compiler und Linker
 HDR     =											#header einfuegen -> hpp
-SRC		= 3.cpp							#code einfuegen   -> cpp
+SRC		= main.cpp							#code einfuegen   -> cpp
 OBJ     = $(SRC:.cpp=.o)
 BIN     = main										#name der ausfuehrbaren datei
 CC      = g++

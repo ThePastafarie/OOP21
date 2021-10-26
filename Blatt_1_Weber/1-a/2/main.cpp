@@ -1,7 +1,7 @@
 /*
 *Peter Weber  1936796
 *
-*Gruppe: Do12
+*Gruppe: Mo16
 *Uebungsblatt: 1 Aufgabe: 1_a_2
 */
 

@@ -1,8 +1,8 @@
 /*
 *Peter Weber  1936796
 *
-*Gruppe: Do12
-*Uebungsblatt: 6 Aufgabe: 1
+*Gruppe: Mo16
+*Uebungsblatt: 1 Aufgabe: 1_a_1
 */
 
 #include <iostream>
