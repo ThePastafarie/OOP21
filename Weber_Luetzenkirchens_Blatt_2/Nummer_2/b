@@ -1,0 +1,16 @@
+/*
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
+*
+*Gruppe: Mo16
+*Uebungsblatt: 2 Aufgabe: 2_b
+*/
+
+
+*
+*
+*
+Ende   von f: 3, 6
+Main:        -1, 3
+
+diese änderrung ensteht da durch das jetzt die adressen von a übergeben wird(Call-by-reference).

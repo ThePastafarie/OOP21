@@ -1,0 +1,16 @@
+/*
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
+*
+*Gruppe: Mo16
+*Uebungsblatt: 2 Aufgabe: 2_d
+*/
+
+
+-Call-by-value
+Hier bei wird von den an die Funktion weiter gegebenden Variable eine kopie ihres Wertes erstellt,
+mit welcher die Funktion dann arbeitet. Der eigentiche Wert der Variable wird dabei nicht veraendert.
+
+-Call-by-reference
+Hier bei wird die adresse einer Variable an die Funktion weiter gegeben,
+mit hilfer dieser wird die Funktion direkt mit dem wert der Variable aberbeiten und kann diesen auch aendern.
