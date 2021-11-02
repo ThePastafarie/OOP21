@@ -11,6 +11,6 @@
 *
 *
 Ende   von f: 3, 6
-Main:        -1, 3
+Main:         3, 6
 
 diese änderrung ensteht da durch das jetzt die adressen von a übergeben wird(Call-by-reference).

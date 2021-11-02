@@ -3,6 +3,13 @@
  * Bergische Universitaet Wuppertal
  * Vorlage Blatt 2
  */
+/*
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
+*
+*Gruppe: Mo16
+*Uebungsblatt: 2 Aufgabe: 3_a
+*/
 
 #include <cstdlib> 
 #include <ctime>
@@ -18,16 +25,16 @@ int main() {
     cin >> dim;
 
   //Speicher fuer dim x dim  Matrix anfordern
-    matrix = new double*[sizeof(double*)*dim];
+    matrix = new double*[dim];
     for(int i=0 ; i<dim ; i++) {
-    matrix[i] = new double [sizeof(double)*dim];
+    matrix[i] = new double [dim];
     }
 
   //Mit Zufallswerten fuellen
     srand(time(NULL));
     for(int i=0 ; i<dim ; i++) 
     for(int j=0 ; j<dim ; j++) 
-    matrix[i][j] = (double)rand(); 
+    matrix[i][j] = (int)rand() % 89 + 10; //random zahlen zwichen 10 und 99, weil netter zum anschauen!!
 
   //Ausgeben
     cout << "Erzeugte Matrix: " << endl;
