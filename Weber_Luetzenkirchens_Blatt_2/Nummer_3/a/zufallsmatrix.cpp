@@ -18,37 +18,37 @@
 using namespace std;
 
 int main() {
-    double** matrix;
-    int dim;
+  double** matrix;
+  int dim;
 
-    cout << "Dimension eingeben: ";
-    cin >> dim;
+  cout << "Dimension eingeben: ";
+  cin >> dim;
 
   //Speicher fuer dim x dim  Matrix anfordern
-    matrix = new double*[dim];
-    for(int i=0 ; i<dim ; i++) {
+  matrix = new double*[dim];
+  for(int i=0 ; i<dim ; i++) {
     matrix[i] = new double [dim];
-    }
+  }
 
   //Mit Zufallswerten fuellen
-    srand(time(NULL));
-    for(int i=0 ; i<dim ; i++) 
+  srand(time(NULL));
+  for(int i=0 ; i<dim ; i++) 
     for(int j=0 ; j<dim ; j++) 
-    matrix[i][j] = (int)rand() % 89 + 10; //random zahlen zwichen 10 und 99, weil netter zum anschauen!!
+      matrix[i][j] = (int)rand() % 89 + 10; //random zahlen zwichen 10 und 99, weil netter zum anschauen!!
 
   //Ausgeben
-    cout << "Erzeugte Matrix: " << endl;
-    for(int i=0 ; i<dim ; i++) {
+  cout << "Erzeugte Matrix: " << endl;
+  for(int i=0 ; i<dim ; i++) {
     for(int j=0 ; j<dim ; j++) { 
-        cout << matrix[i][j] << " ";
+      cout << matrix[i][j] << " ";
     }
     cout << endl;
-    }
+  }
   //Speicher wieder freigeben
-    for(int i=0 ; i<dim ; i++) {
+  for(int i=0 ; i<dim ; i++) {
     delete [] matrix[i];
-    }
-    delete [] matrix;
+  }
+  delete [] matrix;
 
-    return 0;
+  return 0;
 }
