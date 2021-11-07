@@ -1,9 +1,4 @@
 /*
- * Grundlagen der objektorientierten Programmierung
- * Bergische Universitaet Wuppertal
- * Vorlage Blatt 2
- */
-/*
 *Peter Weber          1936796
 *Jonas Lützenkirchen  2023550
 *
@@ -33,14 +28,12 @@ int main() {
         matrix[i][j] = new double [dim];
       }
     }
-    
-
   //Mit Zufallswerten fuellen
-    //srand(time(NULL));
-    for(int i=0 ; i<n ; i++) 
+  //srand(time(NULL));
+  for(int i=0 ; i<n ; i++) 
     for(int j=0 ; j<dim ; j++)
-    for(int k=0 ; k<dim ; k++) 
-    matrix[i][j][k] = (int)rand() % 89 + 10; //random zahlen zwichen 10 und 99, weil netter zum anschauen!!
+      for(int k=0 ; k<dim ; k++) 
+        matrix[i][j][k] = (int)rand() % 89 + 10; //random zahlen zwichen 10 und 99, weil netter zum anschauen!!
 
   //Ausgeben
     cout << "Erzeugte Matrix: " << endl << endl;
