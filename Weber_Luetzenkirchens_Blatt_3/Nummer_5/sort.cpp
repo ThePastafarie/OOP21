@@ -80,7 +80,7 @@ int main() {
 	int numbers2[length]={0};
 
 	// Mit Zufallszahlen zwischen 1 und length fuellen
-	//srand(time(NULL));
+	srand(time(NULL));
 	for(i=0 ; i<length ; i++) {
 		numbers1[i] = rand() % length + 1;
 		numbers2[i] = rand() % length + 1;
