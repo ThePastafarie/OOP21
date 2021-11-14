@@ -1,0 +1,15 @@
+/*
+*Peter Weber          1936796
+*Jonas Lützenkirchen  2023550
+*
+*Gruppe: Mo16
+*Uebungsblatt: 4 Aufgabe: 8_d
+*/
+
+
+1. double foo(int *a, const int& l)
+2. int foo(double *a, int& l)
+3. int foo(int *a, int& l)
+4. double foo(int *a)
+
+int foo(int *a, const int& l) kann überladen werden mit:
