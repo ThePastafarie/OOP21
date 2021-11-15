@@ -1,5 +1,6 @@
-#ifndef loeser
-#define loeser
+#ifndef loeser_header
+#define loeser_header
+
 
 const int n=10;
 

@@ -6,15 +6,14 @@
 *Uebungsblatt: 4 Aufgabe: 8_d
 */
 
-
+#include "loeser.hpp"
 
 #include <iostream>
 #include <iomanip>
-#include "loeser.h"
+
 
 using namespace std;
 
-const int n=10; //Systemdimension
 
 //Ueberschreibt A mit der entsprechenden LU-Zerlegung 
 //(ohne Pivotisierung)

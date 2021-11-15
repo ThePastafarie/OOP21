@@ -5,7 +5,8 @@
 *Gruppe: Mo16
 *Uebungsblatt: 4 Aufgabe: 8_d
 */
-const int n=10;
+
+#include "loeser.hpp"
 
 void lu(double A[n][n]) { 
     for(int k=0 ; k<n ; k++) {
