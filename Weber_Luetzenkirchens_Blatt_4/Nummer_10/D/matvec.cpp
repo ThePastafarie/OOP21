@@ -26,6 +26,42 @@ bool dot<bool>(bool *x, bool *y, int n) {
     return temp;
 }
 
+template <typename S, typename T> void matvec(S **A, T *x, S *y, int n) {
+    for(int i = 0; i < n; i++){
+        y[i] = 0;
+        for(int j = 0; j < n; j++)
+            y[i] += A[j][i] * x[j];
+    }
+}
+
+template <typename S, typename T> void matmat(S **A, T **B, S **C, int n) {
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            C[j][i] = 0;
+
+            for(int k = 0; k < n; k++)
+                C[j][i] += A[k][i] * B[j][k];
+        }
+    }
+}
+
+template <typename T> void out(T *x, int n) {
+    for(int i = 0; i < n; i++){
+        cout << x[i] << endl;
+    }
+    cout << endl;
+}
+
+template <typename T> void out(T **A, int n) {
+    cout << right;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++)
+            cout << setw(5) << A[j][i];
+        cout << endl;
+    }
+    cout << left << endl;
+}
+
 int main() {
   //Vektoren
   int *xi, *yi;
@@ -97,14 +133,12 @@ int main() {
 
 
   //Teilaufgabe c)
-  /*
   matvec(D1,xf,xd,n);
   cout << "Matrix-Vektor-Produkt mit double und float: " << endl;
   out(xd,n);
   matvec(F,xi,xf,n);
   cout << "Matrix-Vektor-Produkt mit float und int: " << endl;
   out(xf,n);
-  */
 
 
   //Teilaufgabe d)

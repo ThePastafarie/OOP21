@@ -11,26 +11,35 @@
 using namespace std;
 
 
-int dot(int *x, int *y, int n) {
-  int res = 0;
-  for(int i=0 ; i<n ; i++)
+template <typename T> T dot(T *x, T *y, int n) {
+    T res = 0;
+    for(int i=0 ; i<n ; i++)
     res += x[i]*y[i];
-  return res;
+    return res;
 } 
 
-float dot(float *x, float *y, int n) {
-  float res = 0;
-  for(int i=0 ; i<n ; i++)
-    res += x[i]*y[i];
-  return res;
-} 
+template<>
+bool dot<bool>(bool *x, bool *y, int n) {
+    bool temp = true;
+    for(int i = 0; i < n && temp; i++)
+        temp = (x[i] == y[i]);
+    return temp;
+}
 
-double dot(double *x, double *y, int n) {
-  double res = 0;
-  for(int i=0 ; i<n ; i++)
-    res += x[i]*y[i];
-  return res;
-} 
+template <typename S, typename T> void matvec(S **A, T *x, S *y, int n) {
+    for(int i = 0; i < n; i++){
+        y[i] = 0; //Alle Werte auf 0 setzen
+        for(int j = 0; j < n; j++)
+            y[i] += A[j][i] * x[j];
+    }
+}
+
+template <typename T> void out(T *x, int n) {
+    for(int i = 0; i < n; i++){
+        cout << x[i] << endl;
+    }
+    cout << endl;
+}
 
 int main() {
   //Vektoren
@@ -45,8 +54,39 @@ int main() {
   double **D1;
   double **D2;
 
+  //Eingabe n
+  int n;
+  cout << "Dimension eingeben: ";
+  cin >> n;
+  cout << endl;
+
+  if(n <= 0){
+    cout << "Dimension muss größer als null sein!!";
+    return 1;
+  }
+
+  //Speicher reservieren
+  xi = new int[n];
+  yi = new int[n];
+  xf = new float[n];
+  yf = new float[n];
+  xd = new double[n];
+  yd = new double[n];
+  xb = new bool[n];
+  yb = new bool[n];
+
+  I = new int*[n];
+  F = new float*[n];
+  D1 = new double*[n];
+  D2 = new double*[n];
+  for(int i = 0; i < n; i++) {
+    I[i] = new int[n];
+    F[i] = new float[n];
+    D1[i] = new double[n];
+    D2[i] = new double[n];
+  }
+
   //Teilaufgabe a)
-  /*
   //Vektoren und Matrizen mit Werten fuellen  
   for(int i=0 ; i<n ; i++) {
     xi[i] = i+1;    yi[i] = i-1;
@@ -67,22 +107,17 @@ int main() {
   cout << "Skalarprodukt von int Vektoren: "    << dot(xi,yi,n) << endl;
   cout << "Skalarprodukt von float Vektoren: "  << dot(xf,yf,n) << endl;
   cout << "Skalarprodukt von double Vektoren: " << dot(xd,yd,n) << endl;
-  */
 
-
-  //Teilaufgabe b)
-  //cout << "Skalarprodukt von bool Vektoren: "   << dot(xb,yb,n) << endl << endl;
+  cout << "Skalarprodukt von bool Vektoren: "   << dot(xb,yb,n) << endl << endl;
 
 
   //Teilaufgabe c)
-  /*
   matvec(D1,xf,xd,n);
   cout << "Matrix-Vektor-Produkt mit double und float: " << endl;
   out(xd,n);
   matvec(F,xi,xf,n);
   cout << "Matrix-Vektor-Produkt mit float und int: " << endl;
   out(xf,n);
-  */
 
 
   //Teilaufgabe d)
