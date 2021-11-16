@@ -10,8 +10,8 @@
 #		Aufraeumen mit make clean
 
 # Variablen mit Dateinamen, Compileraufruf und Optionen fuer Compiler und Linker
-HDR     = loeser.h											#header einfuegen -> hpp
-SRC		= lgs.cpp loeser.cpp									#code einfuegen   -> cpp
+HDR     =											#header einfuegen -> hpp
+SRC		= main.cpp									#code einfuegen   -> cpp
 OBJ     = $(SRC:.cpp=.o)
 BIN     = main										#name der ausfuehrbaren datei
 CC      = g++
