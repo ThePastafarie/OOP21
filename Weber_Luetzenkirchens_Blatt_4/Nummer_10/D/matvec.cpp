@@ -142,14 +142,14 @@ int main() {
 
 
   //Teilaufgabe d)
-  /*
+  
   matmat(D1,I,D2,n);
   cout << "Matrix-Matrix-Produkt mit double und int: " << endl;
   out(D2,n);
   matmat(D1,F,D2,n);
   cout << "Matrix-Matrix-Produkt mit double und float: " << endl;
   out(D2,n);
-  */
+  
 
   return 0;
 }
